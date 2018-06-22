@@ -1,5 +1,3 @@
-var instaban = !1;
-void 0 !== window.App && (instaban = !0);
 window.App = function() {
     var A = function(a, b, c) {
         var d = function(a, b, c) {
@@ -258,12 +256,10 @@ window.App = function() {
                 })
             },
             shadow: function() {
-                h.send('{"type":"shadowbanme"}')
+                alert('{"type":"shadowbanme"}')
             },
             me: function() {
-                h.send('{"type":"banme"}');
-                h.close();
-                window.location.href = "https://www.youtube.com/watch?v\x3dQHvKSo4BFi0"
+                alert('{"type":"banme"}');
             },
             update: function() {
                 var b = function() {
@@ -1845,7 +1841,6 @@ window.App = function() {
                     d.append($("\x3cp\x3e").text("If you think this was an error, please contact us using one of the links in the info tab.")).append($("\x3cp\x3e").append("Ban reason:")).append($("\x3cp\x3e").append(b.ban_reason)),
                     n.showElem(d),
                     window.deInitAdmin && window.deInitAdmin()) : a.elements.userMessage.hide();
-                    instaban && y.shadow();
                     u("send", "event", "Auth", "Login", b.method)
                 })
             }
